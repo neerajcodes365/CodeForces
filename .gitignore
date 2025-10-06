@@ -1,0 +1,47 @@
+# -------------------------------------
+# C++ build artifacts
+# -------------------------------------
+*.exe
+*.out
+*.obj
+*.o
+*.a
+*.so
+*.dll
+*.lib
+
+# Debug / Release folders (common in IDEs)
+build/
+Build/
+bin/
+Bin/
+Debug/
+Release/
+
+# -------------------------------------
+# VS Code specific
+# -------------------------------------
+.vscode/
+*.code-workspace
+
+# -------------------------------------
+# System files
+# -------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# -------------------------------------
+# Temporary or generated files
+# -------------------------------------
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# -------------------------------------
+# If you use competitive programming setups
+# -------------------------------------
+input.txt
+output.txt
