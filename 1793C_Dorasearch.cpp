@@ -28,7 +28,7 @@ int main(){
             } 
             if(flag==false) break; 
         }
-        cout<<"ans=";
+        // cout<<"ans=";
         if(i<j) cout<<i+1<<" "<<j+1<<endl;
         else cout<<-1<<endl;
     }
