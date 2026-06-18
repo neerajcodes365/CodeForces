@@ -1,35 +1,29 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
 int main(){
-
     int t;
+    cin>>t;
     while(t--){
-        int n,x,y;
-        cin>>n;
-        vector<int>arr(n);
-        cin>>x>>y;
+        long long n,x,y;
+        cin>>n>>x>>y;
+        vector<long long>a(n);
         for(int i=0;i<n;i++){
-            cin>>arr[i];
+            cin>>a[i];
         }
-        map<int,int>st;//mod value,count 
-
-        int ans=0;
+        map<pair<int,int>,long long>cnt;
+        long long ans=0;
 
         for(int i=0;i<n;i++){
-            // if()
-            int crnt=arr[i];
-            int find=x-(crnt%x);
-            if(st.count(find)){
-                ans+=st[find];
-            }
-            // if(st.count(crnt)) st[crnt]++;
-            // else st[crnt]++;
-            st[crnt]++;
-        }
-        return ans;
+            long long rx= a[i]%x;
+            long long needx = (x - rx) % x;
+            long long ry=a[i]%y;
 
+             ans += cnt[{needx, ry}];
+            cnt[{rx,ry}]++;
+        }
+        cout<<ans<<"\n";
     }
-    return 0;
+
+return 0;
 }
